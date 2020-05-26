@@ -21,3 +21,23 @@ for (a = 0; a < students.length; a++) {
 		document.write(students[a][0] + ' got an A<br>');
 	}
 }
+
+let classPoints = 0;
+for (let k = 0; k < students.length; k++) {
+	classPoints += students[k][1];
+}
+let classAverage = classPoints / students.length;
+let grade = '';
+if (classAverage < 60) {
+	grade = 'F';
+} else if (classAverage < 70) {
+	grade = 'D';
+} else if (classAverage < 80) {
+	grade = 'C';
+} else if (classAverage < 90) {
+	grade = 'B';
+} else {
+	grade = 'A';
+}
+
+document.write(`<br>The class avergage is ${classAverage} points. The class grade is ${grade}.`);
