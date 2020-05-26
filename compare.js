@@ -26,7 +26,7 @@ let classPoints = 0;
 for (let k = 0; k < students.length; k++) {
 	classPoints += students[k][1];
 }
-let classAverage = classPoints / students.length;
+let classAverage = Math.floor(classPoints / students.length);
 let grade = '';
 if (classAverage < 60) {
 	grade = 'F';
